@@ -3,7 +3,7 @@ import type { Project } from '../types'
 import ProjectList from '../components/ProjectList'
 
 function ProjectsPage() {
-  const [projects, setProjects] = useState<Project[]>([])
+  const [projects, setProjects] = useState<Project[] | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -17,6 +17,7 @@ function ProjectsPage() {
   }, [])
 
   if (error) return <p>Error: {error}</p>
+  if (projects === null) return <p>Loading projects...</p>
 
   return (
     <section>
