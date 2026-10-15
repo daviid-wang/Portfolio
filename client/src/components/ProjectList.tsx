@@ -1,12 +1,12 @@
-import type { Project } from "../types";
-import ProjectCard from "./ProjectCard";
+import type { Project } from '../types'
+import ProjectCard from './ProjectCard'
 
 type ProjectListProps = {
-  projects: Project[];
-};
+  projects: Project[]
+}
 
 function ProjectList({ projects }: ProjectListProps) {
-  if (projects.length === 0) return <p>No projects yet.</p>;
+  if (projects.length === 0) return <p>No projects yet.</p>
 
   return (
     <ul>
@@ -14,7 +14,7 @@ function ProjectList({ projects }: ProjectListProps) {
         <ProjectCard key={p.id} project={p} />
       ))}
     </ul>
-  );
+  )
 }
 
-export default ProjectList;
+export default ProjectList

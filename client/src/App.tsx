@@ -1,7 +1,7 @@
-import { Routes, Route, Link } from "react-router";
-import LandingPage from "./pages/LandingPage";
-import ProjectsPage from "./pages/ProjectsPage";
-import NotFoundPage from "./pages/NotFoundPage";
+import { Routes, Route, Link } from 'react-router'
+import LandingPage from './pages/LandingPage'
+import ProjectsPage from './pages/ProjectsPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
   return (
@@ -18,6 +18,6 @@ function App() {
         </Routes>
       </main>
     </>
-  );
+  )
 }
-export default App;
+export default App
