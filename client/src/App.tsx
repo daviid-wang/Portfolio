@@ -1,29 +1,23 @@
-import { useEffect, useState } from 'react'
-import type { Project } from './types'
-import ProjectList from './components/ProjectList'
+import { Routes, Route, Link } from "react-router";
+import LandingPage from "./pages/LandingPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
-  const [projects, setProjects] = useState<Project[]>([])
-  const [error, setError] = useState<string | null>(null)
-
-  useEffect(() => {
-    fetch('/api/projects')
-      .then(res => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
-        return res.json()
-      })
-      .then(setProjects)
-      .catch(err => setError(err.message))
-  }, [])
-
-  if (error) return <p>Error: {error}</p>
-
   return (
-    <main>
-      <h1>Projects</h1>
-      <ProjectList projects={projects} />
-    </main>
-  )
-}
+    <>
+      <nav>
+        <Link to="/">Home</Link> | <Link to="/projects">Projects</Link>
+      </nav>
 
-export default App
+      <main>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </main>
+    </>
+  );
+}
+export default App;
