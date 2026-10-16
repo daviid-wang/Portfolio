@@ -2,14 +2,12 @@ import { Routes, Route, Link } from 'react-router'
 import LandingPage from './pages/LandingPage'
 import ProjectsPage from './pages/ProjectsPage'
 import NotFoundPage from './pages/NotFoundPage'
+import NavBar from './components/NavBar'
 
 function App() {
   return (
     <>
-      <nav>
-        <Link to="/">Home</Link> | <Link to="/projects">Projects</Link>
-      </nav>
-
+    <NavBar />
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />
