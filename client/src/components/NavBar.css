@@ -4,7 +4,13 @@ nav a {
 }
 
 nav a.active {
-  color: black;
+  color: var(--accent);
   font-weight: bold;
-  border-bottom: 2px solid black;
+}
+
+nav{
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem 2rem;
 }
