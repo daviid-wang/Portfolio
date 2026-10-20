@@ -1,9 +1,9 @@
 :root {
-  --text: #5F625D;
-  --text-h: #20211F;
-  --bg: #F7F6F2;
-  --border: #DCDDD6;
-  --accent: #214CFF;
+  --text: #5f625d;
+  --text-h: #20211f;
+  --bg: #f7f6f2;
+  --border: #dcddd6;
+  --accent: #214cff;
   --font: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
@@ -69,6 +69,46 @@ p {
   color: var(--accent);
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
   font: inherit;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.button-solid-blue {
+  background: var(--accent);
+  color: white;
+  border-radius: 0.3rem;
+}
+
+.button-solid-blue:hover {
+  background: #1a3ed6;
+}
+
+.link-arrow {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 0.3rem;
+}
+
+.link-arrow:hover {
+  text-decoration: underline;
+}
+
+.button:focus-visible,
+.link-arrow:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
 }

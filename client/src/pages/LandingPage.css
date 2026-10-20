@@ -1,7 +1,25 @@
 .landing-title {
   font-size: clamp(3rem, 7vw, 5rem);
   font-weight: 400;
-  line-height: 1.05;
+  line-height: 1.2;
   letter-spacing: -0.03em;
   margin: 1.5rem 0 2rem;
+  padding: 0 2rem;
+}
+
+.landing-intro {
+  max-width: 45rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+  padding: 0 2rem;
+}
+
+.landing-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0 2rem;
 }

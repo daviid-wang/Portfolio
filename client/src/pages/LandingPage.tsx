@@ -13,9 +13,22 @@ function LandingPage() {
         Quality software. <br />
         Responsibly built.
       </h1>
-
-      <p>Full-stack developer working with C#, ASP.NET Core and React.</p>
-      <Link to="/projects">See my projects</Link>
+      <p className="landing-intro">
+        I'm David, a Software Engineering graduate from the University of
+        Western Australia. I'm currently working as a freelance full-stack
+        software developer for a private charter company. I build
+        business-critical aviation features used in time-sensitive operations,
+        from flight manifests and freight handling to passenger check-in and
+        staff certification.
+      </p>
+      <div className="landing-actions">
+        <Link to="/projects" className="button button-solid-blue">
+          View my experience
+        </Link>
+        <Link to="/contact" className="link-arrow">
+          Contact me <span aria-hidden="true">↗</span>
+        </Link>
+      </div>
     </section>
   )
 }
