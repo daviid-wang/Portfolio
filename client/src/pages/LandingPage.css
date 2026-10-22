@@ -6,14 +6,6 @@
   padding: 0 2rem;
 }
 
-.landing-title {
-  font-size: clamp(3rem, 7vw, 5rem);
-  font-weight: 400;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  margin: 1.5rem 0 2rem;
-}
-
 .landing-intro {
   max-width: 45rem;
   font-size: 1rem;
@@ -40,5 +32,4 @@
   aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
-  /* margin-left: 3rem; */
 }

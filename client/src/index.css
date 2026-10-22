@@ -112,3 +112,11 @@ select {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
+
+.title {
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 1.5rem 0 2rem;
+  font-size: clamp(3rem, 7vw, 5rem);
+}

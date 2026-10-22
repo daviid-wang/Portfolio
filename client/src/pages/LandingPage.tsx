@@ -12,7 +12,7 @@ function LandingPage() {
       />
       <div className="landing-content">
         <div className="landing-text">
-          <h1 className="landing-title">
+          <h1 className="title">
             Quality software. <br />
             Responsibly built.
           </h1>
