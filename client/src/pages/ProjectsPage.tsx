@@ -54,7 +54,6 @@ function ProjectsPage() {
         </a>
       </div>
       <section className="experience" id="experience">
-        <Eyebrow label="Experience" />
         <h1 className="sub-title">Experience</h1>
         {error && <p>Error: {error}</p>}
         {!error && experience === null && <p>Loading Experience...</p>}

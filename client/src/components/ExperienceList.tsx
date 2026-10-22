@@ -9,7 +9,7 @@ function ExperienceList({ experiences }: ExperienceListProps) {
   if (experiences.length === 0) return <p>No experiences yet.</p>
 
   return (
-    <ul>
+    <ul className="experience-list">
       {experiences.map((e) => (
         <ExperienceCard key={e.id} experience={e} />
       ))}

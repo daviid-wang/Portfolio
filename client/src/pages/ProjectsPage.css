@@ -22,5 +22,4 @@
   letter-spacing: -0.03em;
   margin: 1.5rem 0 2rem;
   font-size: clamp(2rem, 5vw, 3rem);
-  border-bottom: 1px solid var(--border);
 }
