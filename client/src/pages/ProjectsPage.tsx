@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
-import type { Project } from '../types'
-import ProjectList from '../components/ProjectList'
+
 import Eyebrow from '../components/Eyebrow'
+import type { Experience, Project } from '../types'
+import ProjectList from '../components/ProjectList'
+import ExperienceList from '../components/ExperienceList'
+
 import './ProjectsPage.css'
-import { Link } from 'react-router'
 
 function ProjectsPage() {
-  const [experience, setExperience] = useState<Project[] | null>(null)
+  const [experience, setExperience] = useState<Experience[] | null>(null)
   const [projects, setProjects] = useState<Project[] | null>(null)
   const [error, setError] = useState<string | null>(null)
 
@@ -47,7 +49,7 @@ function ProjectsPage() {
         <a href="#experience" className="button button-transparent-gray-border">
           Experience
         </a>
-        <a href="/projects" className="button button-transparent-gray-border">
+        <a href="#projects" className="button button-transparent-gray-border">
           Projects
         </a>
       </div>
@@ -55,7 +57,7 @@ function ProjectsPage() {
         <h1 className="sub-title">Experience</h1>
         {error && <p>Error: {error}</p>}
         {!error && experience === null && <p>Loading Experience...</p>}
-        {experience && <ProjectList projects={experience} />}
+        {experience && <ExperienceList experiences={experience} />}
       </section>
       <section className="projects" id="projects">
         <h1 className="sub-title">Projects</h1>
