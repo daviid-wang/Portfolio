@@ -1,6 +1,5 @@
 .projects-summary {
   grid-template-columns: 4fr 3fr;
-  margin-top: 4rem;
 }
 
 .projects-text {
@@ -14,8 +13,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .sub-title {
