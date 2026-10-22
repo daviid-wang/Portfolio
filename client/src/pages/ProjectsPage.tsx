@@ -33,7 +33,7 @@ function ProjectsPage() {
         </p>
       </header>
       <div className="projects-actions">
-        <a href="#projects-list" className="button button-transparent-gray-border">
+        <a href="#experience" className="button button-transparent-gray-border">
           Experience
         </a>
         <a href="/projects" className="button button-transparent-gray-border">
