@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import type { Project } from '../types'
 import ProjectList from '../components/ProjectList'
+import Eyebrow from '../components/Eyebrow'
+import './ProjectsPage.css'
+import { Link } from 'react-router'
 
 function ProjectsPage() {
   const [projects, setProjects] = useState<Project[] | null>(null)
@@ -16,13 +19,33 @@ function ProjectsPage() {
       .catch((err) => setError(err.message))
   }, [])
 
-  if (error) return <p>Error: {error}</p>
-  if (projects === null) return <p>Loading projects...</p>
-
   return (
-    <section>
-      <h1>Projects</h1>
-      <ProjectList projects={projects} />
+    <section className="container">
+      <Eyebrow label="Experience & Projects" />
+      <header className="page-hero projects-summary">
+        <h1 className="title">
+          Work that runs <br />
+          real operations.
+        </h1>
+        <p className="projects-text">
+          Production software I've built for a charter airline, alongside
+          projects that show how I design, test and ship full-stack features.
+        </p>
+      </header>
+      <div className="projects-actions">
+        <a href="#projects-list" className="button button-transparent-gray-border">
+          Experience
+        </a>
+        <a href="/projects" className="button button-transparent-gray-border">
+          Projects
+        </a>
+      </div>
+      <section className="experience" id="experience">
+        <h1 className="sub-title">Experience</h1>
+        {error && <p>Error: {error}</p>}
+        {!error && projects === null && <p>Loading projects...</p>}
+        {projects && <ProjectList projects={projects} />}
+      </section>
     </section>
   )
 }

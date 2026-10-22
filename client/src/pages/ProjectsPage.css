@@ -1,0 +1,26 @@
+.projects-summary {
+  grid-template-columns: 4fr 3fr;
+}
+
+.projects-text {
+  justify-self: center;
+  margin-right: 3rem;
+  margin-top: 5rem;
+}
+
+.projects-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.sub-title {
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 1.5rem 0 2rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  border-bottom: 1px solid var(--border);
+}
