@@ -5,12 +5,12 @@ import profilePhoto from '../assets/profile-photo.jpg'
 
 function LandingPage() {
   return (
-    <section>
+    <section className="container">
       <Eyebrow
         label="Software Engineering Graduate / University of Western Australia"
         status="Seeking a graduate/junior software developer role"
       />
-      <div className="landing-content">
+      <div className="page-hero landing-content">
         <div className="landing-text">
           <h1 className="title">
             Quality software. <br />

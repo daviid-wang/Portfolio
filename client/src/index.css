@@ -95,6 +95,12 @@ select {
   background: #1a3ed6;
 }
 
+.button-transparent-gray-border {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
 .link-arrow {
   font-size: 0.9rem;
   font-weight: 500;
@@ -119,4 +125,14 @@ select {
   letter-spacing: -0.03em;
   margin: 1.5rem 0 2rem;
   font-size: clamp(3rem, 7vw, 5rem);
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.page-hero {
+  display: grid;
+  align-items: center;
+  gap: 3rem;
 }

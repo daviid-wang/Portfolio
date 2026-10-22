@@ -1,9 +1,5 @@
 .landing-content {
-  display: grid;
   grid-template-columns: 3fr 2fr;
-  align-items: center;
-  gap: 3rem;
-  padding: 0 2rem;
 }
 
 .landing-intro {
