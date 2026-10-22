@@ -1,11 +1,12 @@
 .projects-summary {
   grid-template-columns: 4fr 3fr;
+  margin-top: 4rem;
 }
 
 .projects-text {
   justify-self: center;
   margin-right: 3rem;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .projects-actions {
@@ -14,6 +15,7 @@
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 2rem;
+  margin-bottom: 10rem;
 }
 
 .sub-title {

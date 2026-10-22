@@ -62,7 +62,7 @@ function ProjectsPage() {
       <section className="projects" id="projects">
         <h1 className="sub-title">Projects</h1>
         {error && <p>Error: {error}</p>}
-        {!error && projects === null && <p>Loading projects...</p>}
+        {!error && projects === null && <p>Loading Projects...</p>}
         {projects && <ProjectList projects={projects} />}
       </section>
     </section>
