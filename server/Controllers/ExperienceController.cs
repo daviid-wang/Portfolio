@@ -14,13 +14,14 @@ public class ExperienceController : ControllerBase
         {
             new Experience(
                 1,
-                "Full-Stack Software Developer",
+                "Freelance Full-Stack Software Developer",
                 [
-                    "Built flight manifest and freight handling features used in time-sensitive daily operations.",
-                    "Delivered passenger check-in and staff certification workflows end to end."
+                    "Built a Dangerous Goods certification system that tracks pilot expiry dates and blocks lapsed pilots from passenger flights, replacing manual compliance checks.",
+                    "Built “copy previous manifest”, carrying passengers and freight between legs with duplicate checks, so staff no longer re-enter manifests of 60+ passengers on multi-leg flights.",
+                    "Added flight delay tracking (reasons, off-blocks and arrival times) feeding a per-pilot delay report, with database migrations rolled out without disrupting live operations."
                 ],
-                ["C#", "ASP.NET Razor Pages", "SQL Server", "HTMX"],
-                new DateOnly(2025, 1, 1),
+                ["C#", ".NET 10", "ASP.NET Razor Pages", "HTMX", "Linq2DB", "Azure SQL"],
+                "December 2025",
                 null,
                 "Private charter airline",
                 "Perth, WA"

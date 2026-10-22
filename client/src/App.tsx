@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router'
+import { Routes, Route} from 'react-router'
 import LandingPage from './pages/LandingPage'
 import ProjectsPage from './pages/ProjectsPage'
 import NotFoundPage from './pages/NotFoundPage'

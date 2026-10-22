@@ -5,8 +5,8 @@ public record Experience(
   string Role, 
   string[] Description, 
   string[] Tech, 
-  DateOnly DateFrom, 
-  DateOnly? DateTo, 
+  string DateFrom, 
+  string? DateTo, 
   string Company, 
   string Location
 );
