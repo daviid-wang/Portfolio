@@ -6,8 +6,19 @@ import './ProjectsPage.css'
 import { Link } from 'react-router'
 
 function ProjectsPage() {
+  const [experience, setExperience] = useState<Project[] | null>(null)
   const [projects, setProjects] = useState<Project[] | null>(null)
   const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    fetch('/api/experience')
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        return res.json()
+      })
+      .then(setExperience)
+      .catch((err) => setError(err.message))
+  }, [])
 
   useEffect(() => {
     fetch('/api/projects')
@@ -42,6 +53,12 @@ function ProjectsPage() {
       </div>
       <section className="experience" id="experience">
         <h1 className="sub-title">Experience</h1>
+        {error && <p>Error: {error}</p>}
+        {!error && experience === null && <p>Loading Experience...</p>}
+        {experience && <ProjectList projects={experience} />}
+      </section>
+      <section className="projects" id="projects">
+        <h1 className="sub-title">Projects</h1>
         {error && <p>Error: {error}</p>}
         {!error && projects === null && <p>Loading projects...</p>}
         {projects && <ProjectList projects={projects} />}
