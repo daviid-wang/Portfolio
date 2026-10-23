@@ -47,10 +47,10 @@ function ProjectsPage() {
       </header>
       <div className="projects-actions">
         <a href="#experience" className="button button-transparent-gray-border">
-          Experience
+          Experience <span aria-hidden="true">↓</span>
         </a>
         <a href="#projects" className="button button-transparent-gray-border">
-          Projects
+          Projects ({projects?.length ?? 0}) <span aria-hidden="true">↓</span>
         </a>
       </div>
       <section className="experience" id="experience">
