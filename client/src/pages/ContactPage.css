@@ -1,11 +1,120 @@
 .contact-content {
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
   margin-bottom: 3rem;
-  grid-template-columns: minmax(0, 1fr);
+  max-width: 40rem;
 }
 
-.contact-text {
-  max-width: 36rem;
+.contact-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-email {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  color: var(--accent);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+
+.contact-socials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  column-gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contact-social-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  color: var(--text-h);
+  text-decoration: none;
+}
+
+.contact-social-link .label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact-social-value {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.contact-social-arrow {
+  color: var(--accent);
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.contact-social-link:hover .contact-social-value{
+  color: var(--accent);
+}
+
+.contact-details-band {
+  background: white;
+  padding: 4rem 0;
+  margin-bottom: 4rem;
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 3rem 5rem;
+}
+
+.contact-details-heading {
+  margin: 1rem 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text-h);
+}
+
+.contact-details-text {
+  max-width: 34rem;
+  font-size: 0.9rem;
+  line-height: 1.7;
   color: var(--text);
-  line-height: 1.6;
+}
+
+.glance-list {
+  margin: 1rem 0 0;
+}
+
+.glance-item {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.glance-item dd {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-h);
+}
+
+.glance-note {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: var(--text);
 }
