@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem 0 2.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-text {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--text);
+}
+
+.footer-wrap {
+  margin-top: auto;
+}

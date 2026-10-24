@@ -1,13 +1,18 @@
-import { Routes, Route} from 'react-router'
+import { Routes, Route, useLocation } from 'react-router'
 import LandingPage from './pages/LandingPage'
 import ProjectsPage from './pages/ProjectsPage'
 import NotFoundPage from './pages/NotFoundPage'
 import NavBar from './components/NavBar'
 
+import Footer from './components/Footer'
+
 function App() {
+  const { pathname } = useLocation()
+  const showFooter = pathname !== '/'
+
   return (
     <>
-    <NavBar />
+      <NavBar />
       <main>
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -15,6 +20,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
+      {showFooter && <Footer />}
     </>
   )
 }
