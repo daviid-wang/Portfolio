@@ -18,7 +18,7 @@ public class ProjectsController : ControllerBase
                 "FEATURED · 2026", 
                 "Designed in Figma and built from scratch. A React and TypeScript single-page app with client-side routing, served by an ASP.NET Core 10 API. Azure deployment planned. Built to learn React and TypeScript.", 
                 ["ASP.NET Core", "React", "TypeScript", "Azure", "Figma"], 
-                ["https://github.com/daviid-wang/Portfolio"]
+                [new ProjectLink("GitHub", "https://github.com/daviid-wang/Portfolio")]
             ),
             new Project(
                 2, 
@@ -26,7 +26,7 @@ public class ProjectsController : ControllerBase
                 "UNIVERSITY · 2023", 
                 "A plagiarism-detection web app for a UWA academic. I built the Word metadata analysis that flags suspicious edit histories and deployed the app to AWS Lightsail. The app was used by multiple professors to detect plagiarism in student submissions.", 
                 ["Python", "Flask", "JavaScript", "AWS", "Lightsail"], 
-                ["https://github.com/lujor20/CITS3200_Project"]
+                [new ProjectLink("GitHub", "https://github.com/lujor20/CITS3200_Project")]
             ),
             new Project(
                 3, 
@@ -34,7 +34,10 @@ public class ProjectsController : ControllerBase
                 "NOT-FOR-PROFIT · 2022-23", 
                 "Responsive websites built from Figma designs for not-for-profits, including the WA Debating League, as part of a 30+ student team. It led to a paid continuation role with the League.", 
                 ["Vue.js", "Tailwind CSS", "Figma", "Git"], 
-                ["https://github.com/codersforcauses/elucidate", "https://github.com/codersforcauses/wadl"]
+                [
+                    new ProjectLink("WA Debating League", "https://github.com/codersforcauses/wadl"),
+                    new ProjectLink("Elucidate", "https://github.com/codersforcauses/elucidate")
+                ]
             )
         };
         return Ok(projects);

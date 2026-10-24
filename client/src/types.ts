@@ -9,11 +9,16 @@ export type Experience = {
   location: string
 }
 
+export type ProjectLink = {
+  label: string
+  url: string
+}
+
 export type Project = {
   id: number
   title: string
   eyebrow: string
   description: string
   tech: string[]
-  url: string[]
+  links: ProjectLink[]
 }

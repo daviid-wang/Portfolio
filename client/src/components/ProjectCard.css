@@ -35,7 +35,12 @@
 
 .project-card-links {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
   margin-top: auto;
   padding-top: 1.5rem;
+}
+
+.project-card-links a {
+  white-space: nowrap;
 }
