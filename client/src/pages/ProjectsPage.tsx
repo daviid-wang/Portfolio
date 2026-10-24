@@ -4,6 +4,7 @@ import Eyebrow from '../components/Eyebrow'
 import type { Experience, Project } from '../types'
 import ProjectList from '../components/ProjectList'
 import ExperienceList from '../components/ExperienceList'
+import CallToAction from '../components/CallToAction'
 
 import './ProjectsPage.css'
 
@@ -65,6 +66,7 @@ function ProjectsPage() {
         {!error && projects === null && <p>Loading Projects...</p>}
         {projects && <ProjectList projects={projects} />}
       </section>
+      <CallToAction />
     </section>
   )
 }

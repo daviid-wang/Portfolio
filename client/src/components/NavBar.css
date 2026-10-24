@@ -34,6 +34,15 @@
   display: flex;
 }
 
+.navbar-links .navbar-resume {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .navbar-links a {
   width: 6rem;
   text-align: center;
