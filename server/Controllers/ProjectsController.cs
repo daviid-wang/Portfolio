@@ -34,7 +34,7 @@ public class ProjectsController : ControllerBase
                 "NOT-FOR-PROFIT · 2022-23", 
                 "Responsive websites built from Figma designs for not-for-profits, including the WA Debating League, as part of a 30+ student team. It led to a paid continuation role with the League.", 
                 ["Vue.js", "Tailwind CSS", "Figma", "Git"], 
-                ["https://github.com/lujor20/CITS3200_Project"]
+                ["https://github.com/codersforcauses/elucidate", "https://github.com/codersforcauses/wadl"]
             )
         };
         return Ok(projects);

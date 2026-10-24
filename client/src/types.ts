@@ -12,6 +12,8 @@ export type Experience = {
 export type Project = {
   id: number
   title: string
+  eyebrow: string
   description: string
   tech: string[]
+  url: string[]
 }
