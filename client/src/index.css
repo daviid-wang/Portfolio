@@ -154,7 +154,9 @@ select {
 }
 
 .container {
-  padding: 0 2rem;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 5rem);
 }
 
 .page-hero {

@@ -1,0 +1,41 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: white;
+  border: 1px solid var(--border);
+}
+
+.project-card-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.project-card-description {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.project-card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.project-card-tag {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--border);
+  color: var(--text-h);
+}
+
+.project-card-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
