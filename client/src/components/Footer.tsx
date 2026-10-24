@@ -1,8 +1,8 @@
 import './Footer.css'
 
-function Footer() {
-  const year = new Date().getFullYear()
+const year = new Date().getFullYear()
 
+function Footer() {
   return (
     <footer className="container footer-wrap">
       <div className="footer">
