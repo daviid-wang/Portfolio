@@ -1,3 +1,10 @@
 namespace Portfolio.Api.Models;
 
-public record Project(int Id, string Title, string Description, string[] Tech);
+public record Project(
+  int Id, 
+  string Title,
+  string Eyebrow,
+  string Description,
+  string[] Tech,
+  string[] Url
+);
