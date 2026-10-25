@@ -6,7 +6,7 @@ namespace Portfolio.Api.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 
-public class SkillsController : ControllerBase
+public class SkillGroupsController : ControllerBase
 {
     [HttpGet]
     public ActionResult<IEnumerable<SkillGroup>> Get()

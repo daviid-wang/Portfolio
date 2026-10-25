@@ -36,9 +36,3 @@ public record Skill(
   SkillLevel Level,
   string Description
 );
-
-public record SkillGroup(
-  string Title,
-  string Summary,
-  Skill[] Skills
-);
