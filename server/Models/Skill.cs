@@ -4,30 +4,30 @@ namespace Portfolio.Api.Models;
 [JsonConverter(typeof(JsonStringEnumConverter<SkillLevel>))]
 public enum SkillLevel
 {
-  [JsonStringEnumMemberName("production")]
-  Production,
+    [JsonStringEnumMemberName("production")]
+    Production,
 
-  [JsonStringEnumMemberName("project")]
-  Project,
+    [JsonStringEnumMemberName("project")]
+    Project,
 
-  [JsonStringEnumMemberName("learning")]
-  Learning
+    [JsonStringEnumMemberName("learning")]
+    Learning
 }
 
 [JsonConverter(typeof(JsonStringEnumConverter<Source>))]
 public enum Source
 {
-  [JsonStringEnumMemberName("this-site")]
-  ThisSite,
+    [JsonStringEnumMemberName("this-site")]
+    ThisSite,
 
-  [JsonStringEnumMemberName("coders-for-causes")]
-  CodersForCauses,
+    [JsonStringEnumMemberName("coders-for-causes")]
+    CodersForCauses,
 
-  [JsonStringEnumMemberName("airline")]
-  Airline,
+    [JsonStringEnumMemberName("airline")]
+    Airline,
 
-  [JsonStringEnumMemberName("capstone-project")]
-  CapstoneProject
+    [JsonStringEnumMemberName("capstone-project")]
+    CapstoneProject
 }
 
 public record Skill(

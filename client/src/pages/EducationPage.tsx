@@ -21,6 +21,9 @@ function EducationPage() {
           and websites for not-for-profits through Coders for Causes.
         </p>
       </header>
+      <div className='education-facts-strip'>
+
+      </div>
     </section>
   )
 }

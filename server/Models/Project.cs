@@ -3,7 +3,7 @@ namespace Portfolio.Api.Models;
 public record ProjectLink(string Label, string Url);
 
 public record Project(
-  int Id, 
+  int Id,
   string Title,
   string Eyebrow,
   string Description,
