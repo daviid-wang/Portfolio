@@ -60,28 +60,28 @@ public class SkillGroupsController : ControllerBase
                 "C# and .NET, from this site's API to an airline's operations.",
                 [
                     new Skill(
-                        "ASP.NET Core Web API",
-                        [Source.ThisSite],
-                        SkillLevel.Project,
-                        "Built the server behind this site that supplies its content."
-                    ),
-                    new Skill(
                         "C# · .NET 10",
                         [Source.ThisSite, Source.Airline],
                         SkillLevel.Production,
                         "My main language at work, building software a charter airline relies on every day."
                     ),
                     new Skill(
-                        "REST APIs",
-                        [Source.ThisSite],
-                        SkillLevel.Project,
-                        "Connected this site's front end and server so they share information reliably."
-                    ),
-                    new Skill(
                         "ASP.NET Core Razor Pages",
                         [Source.Airline],
                         SkillLevel.Production,
                         "Built the screens airline staff use daily to plan flights and record delays."
+                    ),
+                    new Skill(
+                        "ASP.NET Core Web API",
+                        [Source.ThisSite],
+                        SkillLevel.Project,
+                        "Built the server behind this site that supplies its content."
+                    ),
+                    new Skill(
+                        "REST APIs",
+                        [Source.ThisSite],
+                        SkillLevel.Project,
+                        "Connected this site's front end and server so they share information reliably."
                     ),
                     new Skill(
                         "Python · Flask",
@@ -146,7 +146,6 @@ public class SkillGroupsController : ControllerBase
                 ]
             )
         };
-
         return Ok(skillGroups);
     }
 }
