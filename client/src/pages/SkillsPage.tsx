@@ -7,13 +7,6 @@ import type { Source, SkillLevel, SkillGroup } from '../types'
 
 import './SkillsPage.css'
 
-const sourceLabel: Record<Source, string> = {
-  'this-site': 'This site',
-  'coders-for-causes': 'Coders for Causes',
-  airline: 'Airline',
-  'capstone-project': 'UWA Capstone Project',
-}
-
 const levelLabel: Record<SkillLevel, string> = {
   production: 'Production',
   project: 'Project',
