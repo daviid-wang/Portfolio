@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Eyebrow from '../components/Eyebrow'
 import CallToAction from '../components/CallToAction'
 
-import type { Source, SkillLevel, SkillGroup } from '../types'
+import type {SkillLevel, SkillGroup } from '../types'
 
 import './SkillsPage.css'
 
