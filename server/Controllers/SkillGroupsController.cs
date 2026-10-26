@@ -121,7 +121,7 @@ public class SkillGroupsController : ControllerBase
                 [
                     new Skill(
                         "Git · GitHub",
-                        [Source.ThisSite, Source.Airline, Source.CodersForCauses, Source.CapstoneProject],
+                        [Source.ThisSite, Source.Airline],
                         SkillLevel.Production,
                         "Tracks every change I make, and let me work alongside 30+ students on a shared codebase."
                     ),

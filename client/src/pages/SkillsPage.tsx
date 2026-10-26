@@ -57,7 +57,7 @@ function SkillsPage() {
                 className={`skills-level-swatch skills-level-swatch-${key}`}
                 aria-hidden="true"
               />
-              Used  in {label.toLowerCase()}
+              Used in {label.toLowerCase()}
             </li>
           ))}
         </ul>
@@ -82,7 +82,14 @@ function SkillsPage() {
             {g.skills.map((s) => (
               <li key={s.name} className={`skill-card skill-card-${s.level}`}>
                 <p className="label label-muted">
-                  {levelLabel[s.level]} · {s.source}
+                  {levelLabel[s.level]}
+                </p>
+                <p className="label label-accent">
+                  {s.source.map((src) => (
+                    <li key={src} className="label">
+                      {src.replaceAll('-', ' ')}
+                    </li>
+                  ))}
                 </p>
                 <h3 className="skill-card-title">{s.name}</h3>
                 <p className="skill-card-description">{s.description}</p>
