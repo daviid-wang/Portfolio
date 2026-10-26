@@ -14,13 +14,11 @@ const sourceLabel: Record<Source, string> = {
   'capstone-project': 'UWA Capstone Project',
 }
 
-
 const levelLabel: Record<SkillLevel, string> = {
   production: 'Production',
   project: 'Project',
   learning: 'Learning',
 }
-
 
 function SkillsPage() {
   const [skillGroup, setSkillGroup] = useState<SkillGroup[] | null>(null)
@@ -52,10 +50,14 @@ function SkillsPage() {
           TypeScript and .NET, production features at a charter airline, and
           client projects at university.
         </p>
-        <ul className="skills-sources">
-          {Object.entries(sourceLabel).map(([key, label]) => (
+        <ul className="skills-level">
+          {Object.entries(levelLabel).map(([key, label]) => (
             <li key={key}>
-              {label}
+              <span
+                className={`skills-level-swatch skills-level-swatch-${key}`}
+                aria-hidden="true"
+              />
+              Used  in {label.toLowerCase()}
             </li>
           ))}
         </ul>
