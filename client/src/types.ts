@@ -16,7 +16,6 @@ export type ProjectLink = {
 
 export type Project = {
   id: number
-  slug: string
   title: string
   eyebrow: string
   description: string

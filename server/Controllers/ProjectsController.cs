@@ -14,7 +14,6 @@ public class ProjectsController : ControllerBase
         {
             new Project(
                 1, 
-                "portfolio-website",
                 "Portfolio Website", 
                 "FEATURED · 2026", 
                 "Designed in Figma and built from scratch. A React and TypeScript single-page app with client-side routing, served by an ASP.NET Core 10 API. Azure deployment planned. Built to learn React and TypeScript.", 
@@ -23,7 +22,6 @@ public class ProjectsController : ControllerBase
             ),
             new Project(
                 2, 
-                "plagiarism-detection-tool",
                 "Plagiarism Detection Tool", 
                 "UNIVERSITY · 2023", 
                 "A plagiarism-detection web app for a UWA academic. I built the Word metadata analysis that flags suspicious edit histories and deployed the app to AWS Lightsail. The app was used by multiple professors to detect plagiarism in student submissions.", 
@@ -32,7 +30,6 @@ public class ProjectsController : ControllerBase
             ),
             new Project(
                 3, 
-                "coders-for-causes",
                 "Coders for Causes", 
                 "NOT-FOR-PROFIT · 2022-23", 
                 "Responsive websites built from Figma designs for not-for-profits, including the WA Debating League, as part of a 30+ student team. It led to a paid continuation role with the League.", 

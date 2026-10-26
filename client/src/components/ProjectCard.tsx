@@ -6,7 +6,7 @@ type ProjectCardProps = {
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
-  const { slug, title, eyebrow, description, tech, links } = project
+  const { title, eyebrow, description, tech, links } = project
 
   return (
     <li className="project-card">
@@ -23,11 +23,6 @@ function ProjectCard({ project }: ProjectCardProps) {
       </ul>
 
       <div className="project-card-links">
-        <div className="project-case-study-link">
-          <a className="link-arrow" href={`/${slug}`}>
-            Case Study <span aria-hidden="true">→</span>
-          </a>
-        </div>
         {links.map((link) => (
           <a key={link.url} href={link.url} className="link-arrow" target="_blank" rel="noopener noreferrer">
             {link.label} <span aria-hidden="true">↗</span>
