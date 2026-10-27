@@ -19,7 +19,7 @@ function EducationCard({ education }: educationCardProps) {
     units,
   } = education
   return (
-    <article className="education-row">
+    <article className="education-wrap">
       <div>
         <p className="education-dates">
           {dateFrom} - {dateTo}
@@ -28,9 +28,12 @@ function EducationCard({ education }: educationCardProps) {
           {location} · {status}
         </p>
       </div>
-      <div>
-        <h2>{degree}</h2>
-        <p className="education-university">{university}</p>
+      <div className="education-content">
+        <div>
+          <h2>{degree}</h2>
+          <p className="education-university">{university}</p>
+        </div>
+
         {summary && <p className="education-summary">{summary}</p>}
 
         {scholarship && (
@@ -46,7 +49,7 @@ function EducationCard({ education }: educationCardProps) {
         )}
 
         {highlights.length > 0 && (
-          <>
+          <div>
             <p className="label label-muted">Highlights</p>
             <ul className="education-highlights">
               {highlights.map((h) => (
@@ -62,17 +65,18 @@ function EducationCard({ education }: educationCardProps) {
                 </li>
               ))}
             </ul>
-          </>
+          </div>
         )}
-
-        <p className="label label-muted">
-          {status === 'Completed' ? 'Relevant coursework' : 'Units included'}
-        </p>
-        <ul className="education-tags">
-          {units.map((u) => (
-            <li key={u}>{u}</li>
-          ))}
-        </ul>
+        <div>
+          <p className="label label-muted">
+            {status === 'Completed' ? 'Relevant coursework' : 'Units included'}
+          </p>
+          <ul className="education-tags">
+            {units.map((u) => (
+              <li key={u}>{u}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </article>
   )

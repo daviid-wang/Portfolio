@@ -1,3 +1,21 @@
 .heading-text {
   max-width: 40rem;
 }
+
+.education-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  margin: 2rem 0 2rem;
+}
+.education-facts > div {
+  padding: 1rem;
+  border-right: 1px solid var(--border);
+}
+.education-facts dd {
+  margin: 0.25rem 0 0;
+  color: var(--text-h);
+}
+
+.education-facts > div:last-child {
+  border-right: none;
+}
