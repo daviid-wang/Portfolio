@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 import Eyebrow from '../components/Eyebrow.tsx'
 import './LandingPage.css'
-import profilePhoto from '../assets/profile-photo.jpg'
+import profilePhoto from '../assets/profile-photo.webp'
 
 function LandingPage() {
   return (
