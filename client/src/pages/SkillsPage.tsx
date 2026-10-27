@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import Eyebrow from '../components/Eyebrow'
 import CallToAction from '../components/CallToAction'
 
-import type {SkillLevel, SkillGroup } from '../types'
+import type { SkillLevel, SkillGroup } from '../types'
 
 import './SkillsPage.css'
 
@@ -15,6 +15,7 @@ const levelLabel: Record<SkillLevel, string> = {
 
 function SkillsPage() {
   const [skillGroup, setSkillGroup] = useState<SkillGroup[] | null>(null)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     fetch('/api/skillgroups')
@@ -23,12 +24,8 @@ function SkillsPage() {
         return res.json()
       })
       .then(setSkillGroup)
-      .catch((err) => console.error(err.message))
+      .catch((err) => setError(err.message))
   }, [])
-
-  if (!skillGroup) {
-    return <div>Loading...</div>
-  }
 
   return (
     <section className="container">
@@ -56,7 +53,9 @@ function SkillsPage() {
         </ul>
       </header>
 
-      {skillGroup.map((g, i) => (
+      {error && <p>Error: {error}</p>}
+      {!error && skillGroup === null && <p>Loading skills...</p>}
+      {skillGroup?.map((g, i) => (
         <section
           key={g.title}
           className="skills-group"
@@ -74,9 +73,7 @@ function SkillsPage() {
           <ul className="skills-grid">
             {g.skills.map((s) => (
               <li key={s.name} className={`skill-card skill-card-${s.level}`}>
-                <p className="label label-muted">
-                  {levelLabel[s.level]}
-                </p>
+                <p className="label label-muted">{levelLabel[s.level]}</p>
                 <p className="label label-accent">
                   {s.source.map((src) => (
                     <li key={src} className="label">
