@@ -41,11 +41,11 @@ public class EducationController : ControllerBase
               new EducationHighlight(
                 "STUDY TOUR · SEOUL · NOV - DEC 2022",
                 "Cyber security study tour, Korea",
-                "Three weeks in Seoul as part of a penetration testing unit, exchanging capstone presentations with students from Korea University and Seoul Women's University. Additionally I gave a presentation to Korea University students on reverse engineering as a security vulnerability.",
+                "Three weeks in Seoul as part of the penetration testing unit, meeting students from Korea University and Seoul Women's University, hearing their capstone project presentations and discussing what we'd covered in class. I also gave a presentation to Korea University students on reverse engineering as a security vulnerability.",
                 ["Public presentation", "Reverse engineering", "Ghidra", "Kali Linux"]
             )
           ],
-          ["Data Structures and Algorithms", "Agile Web Development", "Digital Embedded Systems", "Systems Programming", "Computer Analysis and Visualisation", "Computer Networks", "Knowledge Representation", "Professional Computing", "Penetration Testing"]
+          ["Data Structures and Algorithms", "Agile Web Development", "Digital Embedded Systems", "Systems Programming", "Computer Networks", "Professional Computing", "Penetration Testing"]
       ),
       new Education(
         2,
@@ -55,10 +55,10 @@ public class EducationController : ControllerBase
         "Feb 2024",
         "Nov 2024",
         "One year completed",
-        "Completed one year of postgraduate study, then left the program to pursue professional software development, which led into my current role building aviation software.",
+        "Completed one year of postgraduate study, then left the program to pursue professional software development.",
         new Scholarship(
               "UWA Engineering Scholarship",
-              "Awarded for academic merit and held for the first year of the degree."
+              "Awarded for academic merit."
         ),
         [],
         ["Software Requirements and Design", "Software Testing and Quality Assurance", "Mobile Robots", "Artificial Intelligence and Adaptive Systems"]
