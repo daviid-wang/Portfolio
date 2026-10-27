@@ -8,4 +8,5 @@ export default defineConfig({
       '/api': 'http://localhost:5082',
     },
   },
+  build: { outDir: '../server/wwwroot', emptyOutDir: true },
 })
