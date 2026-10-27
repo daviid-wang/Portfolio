@@ -1,0 +1,67 @@
+.education-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 0 0 2rem;
+}
+.education-facts > div {
+  padding: 1rem;
+  border-right: 1px solid var(--border);
+}
+.education-facts dd {
+  margin: 0.25rem 0 0;
+  color: var(--text-h);
+}
+
+.education-row {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  gap: 1.5rem 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  @media (max-width: 768px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.education-scholarship {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: white;
+  border: 1px solid var(--border);
+}
+.education-scholarship-icon {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--accent);
+  color: white;
+}
+
+.education-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 0.75rem;
+}
+.education-highlight {
+  padding: 1rem 1.25rem;
+  background: white;
+  border: 1px solid var(--border);
+}
+
+.education-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.education-tags li {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border);
+  background: white;
+}

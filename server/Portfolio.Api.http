@@ -1,9 +1,9 @@
-@Portfolio.Api_HostAddress = http://localhost:5082
+@HostAddress = http://localhost:5082
 
-GET {{Portfolio.Api_HostAddress}}/api/projects
+GET {{HostAddress}}/api/projects
 Accept: application/json
 
 ###
 
-GET {{Portfolio.Api_HostAddress}}/api/education
+GET {{HostAddress}}/api/education
 Accept: application/json
