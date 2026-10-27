@@ -39,3 +39,29 @@ export type SkillGroup = {
   summary: string
   skills: Skill[]
 }
+
+export type Scholarship = {
+  title: string
+  description: string
+}
+
+export type EducationHighlight = {
+  eyebrow: string
+  title: string
+  description: string
+  tech: string[]
+}
+
+export type Education = {
+  id: number
+  degree: string
+  university: string
+  location: string
+  dateFrom: string
+  dateTo: string
+  status: string
+  summary: string | null
+  scholarship: Scholarship | null
+  highlights: EducationHighlight[]
+  units: string[]
+}

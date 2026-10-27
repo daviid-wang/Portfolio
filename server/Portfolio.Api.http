@@ -4,3 +4,6 @@ GET {{Portfolio.Api_HostAddress}}/api/projects
 Accept: application/json
 
 ###
+
+GET {{Portfolio.Api_HostAddress}}/api/education
+Accept: application/json

@@ -91,7 +91,6 @@ function SkillsPage() {
           </ul>
         </section>
       ))}
-
       <CallToAction />
     </section>
   )
