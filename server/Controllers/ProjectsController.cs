@@ -16,8 +16,8 @@ public class ProjectsController : ControllerBase
                 1,
                 "Portfolio Website",
                 "FEATURED · 2026",
-                "Designed in Figma and built from scratch. A React and TypeScript single-page app with client-side routing, served by an ASP.NET Core 10 API. Azure deployment planned. Built to learn React and TypeScript.",
-                ["ASP.NET Core", "React", "TypeScript", "Azure", "Figma"],
+                "Designed in Figma and built from scratch. A React and TypeScript single-page app with client-side routing, served by an ASP.NET Core 10 API and deployed on Azure App Service. Built to learn React and TypeScript.",
+                ["ASP.NET Core", "React", "TypeScript", "Azure App Service", "Figma"],
                 [new ProjectLink("GitHub", "https://github.com/daviid-wang/Portfolio")]
             ),
             new Project(

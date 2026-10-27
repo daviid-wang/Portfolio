@@ -140,9 +140,8 @@ public class SkillGroupsController : ControllerBase
                     new Skill(
                         "Azure App Service",
                         [Source.ThisSite],
-                        SkillLevel.Learning,
-                        "Learning it now to put this website online."
-                    )
+                        SkillLevel.Project,
+                        "Hosts this website, with the React front end and .NET server deployed together."                    )
                 ]
             )
         };
