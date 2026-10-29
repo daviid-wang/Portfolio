@@ -13,6 +13,12 @@ const levelLabel: Record<SkillLevel, string> = {
   learning: 'Learning',
 }
 
+const legendLabel: Record<SkillLevel, string> = {
+  production: 'Used in production',
+  project: 'Used on projects',
+  learning: 'Learning now',
+}
+
 function SkillsPage() {
   const [skillGroup, setSkillGroup] = useState<SkillGroup[] | null>(null)
   const [error, setError] = useState<string | null>(null)
@@ -41,13 +47,13 @@ function SkillsPage() {
           client projects at university.
         </p>
         <ul className="skills-level">
-          {Object.entries(levelLabel).map(([key, label]) => (
+          {Object.entries(legendLabel).map(([key, label]) => (
             <li key={key}>
               <span
                 className={`skills-level-swatch skills-level-swatch-${key}`}
                 aria-hidden="true"
               />
-              Used in {label.toLowerCase()}
+              {label}
             </li>
           ))}
         </ul>
