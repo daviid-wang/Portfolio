@@ -4,7 +4,7 @@ My personal portfolio site, designed in Figma and built from scratch. It has a R
 
 I built it to learn React and TypeScript, and to show how I approach a full-stack project from design through to deployment.
 
-<!-- Live site: add the Azure URL here once deployed -->
+**Live site: [daviidwang.dev](https://daviidwang.dev)**
 
 ## What's on the site
 
@@ -24,7 +24,7 @@ I built it to learn React and TypeScript, and to show how I approach a full-stac
 
 **Tooling:** Prettier, oxlint, `dotnet format`, Figma for design
 
-**Hosting:** Azure App Service (in progress)
+**Hosting:** Azure App Service, deployed with GitHub Actions, custom domain via Cloudflare DNS
 
 ## How it works
 
@@ -40,7 +40,7 @@ Browser ──► React app (client/)
 ```
 
 - **Content comes from the API.** Each controller returns typed C# records as JSON. The client has matching TypeScript types in `client/src/types.ts`, so both sides agree on the shape of the data.
-- **One server in production.** The React app is built into `server/wwwroot`. ASP.NET Core serves those files and returns `index.html` for any other route, so client-side routes like `/skills` still work when you refresh the page or open them directly.
+- **One server in production.** The React app is built into `server/wwwroot`. ASP.NET Core serves those files (pre-compressed with Brotli and gzip) and returns `index.html` for any other route, so client-side routes like `/skills` still work when you refresh the page or open them directly. Unknown `/api` routes return 404.
 - **Two servers in development.** Vite serves the front end with hot reload and forwards `/api` requests to the .NET server on port 5082.
 
 ## Project structure
@@ -55,6 +55,7 @@ server/                 ASP.NET Core 10 API
   Controllers/          One controller per endpoint
   Models/               C# records returned by the API
   Portfolio.Api.http    Requests for testing the API from the editor
+.github/workflows/      GitHub Actions deployment to Azure
 package.json            Root script that runs both servers together
 ```
 
@@ -95,11 +96,15 @@ cd client && npm run dev    # front end, in a second terminal
 
 ## Deployment
 
-The site is deployed as a single Azure App Service running .NET 10:
+The site runs on a single Azure App Service (Linux, .NET 10) at [daviidwang.dev](https://daviidwang.dev). Every push to `main` triggers the [deploy workflow](.github/workflows/deploy.yml), which:
 
-1. `npm run build` in `client/` builds the React app into `server/wwwroot`.
-2. `dotnet publish -c Release` in `server/` produces the app, including `wwwroot`.
-3. The published output is deployed to App Service.
+1. Runs `npm ci` and `npm run build` in `client/`, building the React app into `server/wwwroot`.
+2. Runs `dotnet publish -c Release`, which bundles the API with `wwwroot`.
+3. Deploys the published output to App Service.
+
+The workflow can also be run manually from the **Actions** tab.
+
+The domain is registered with Cloudflare, which points `daviidwang.dev` and `www.daviidwang.dev` at App Service through DNS. HTTPS uses free App Service managed certificates that renew automatically.
 
 ## Contact
 
