@@ -62,7 +62,7 @@
   margin-top: 1rem;
 }
 
-.contact-social-link:hover .contact-social-value{
+.contact-social-link:hover .contact-social-value {
   color: var(--accent);
 }
 

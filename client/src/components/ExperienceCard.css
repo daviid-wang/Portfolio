@@ -1,4 +1,4 @@
-.experience-card{
+.experience-card {
   display: grid;
   grid-template-columns: 12rem minmax(0, 1fr) 18rem;
   gap: 2.5rem;
@@ -19,7 +19,7 @@
 
 .experience-location {
   font-size: 0.75rem;
-  color: var(--text); 
+  color: var(--text);
 }
 
 .experience-title {

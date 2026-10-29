@@ -33,11 +33,11 @@ function EducationPage() {
       <header>
         <h1 className="title">
           Engineering degree. <br />
-          Solid Fundamentals.
+          Solid fundamentals.
         </h1>
         <p className="heading-text">
           I studied Software Engineering at the University of Western Australia,
-          graduating in 2023. Then a year of post graduate study before moving
+          graduating in 2023. Then a year of postgraduate study before moving
           into freelance development. My strongest learning at university came
           from projects with real users: a plagiarism checker for UWA academics
           and websites for not-for-profits through Coders for Causes.

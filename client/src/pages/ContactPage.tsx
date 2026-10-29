@@ -93,8 +93,8 @@ function ContactPage() {
               Room to keep learning.
             </h2>
             <p className="contact-details-text">
-              I'm especially interested in full-stack web development. I
-              value thoughtful code review, asking good questions and building
+              I'm especially interested in full-stack web development. I value
+              thoughtful code review, asking good questions and building
               reliable software with careful testing.
             </p>
           </div>

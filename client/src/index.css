@@ -38,7 +38,6 @@ html {
   }
 }
 
-
 body {
   margin: 0;
 }
@@ -86,7 +85,7 @@ ol[class] {
   letter-spacing: 0.05em;
 }
 
-.label-accent{
+.label-accent {
   color: var(--accent);
 }
 

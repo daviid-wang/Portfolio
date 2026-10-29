@@ -15,7 +15,11 @@ function CallToAction() {
         <Link to="/contact" className="button button-solid-blue">
           Contact me
         </Link>
-        <a href="/resume-october.pdf" className="link-arrow" download="David-Wang-Resume.pdf">
+        <a
+          href="/resume-october.pdf"
+          className="link-arrow"
+          download="David-Wang-Resume.pdf"
+        >
           Download résumé <span aria-hidden="true">↓</span>
         </a>
       </div>

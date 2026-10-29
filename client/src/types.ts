@@ -25,7 +25,8 @@ export type Project = {
 
 export type SkillLevel = 'production' | 'project' | 'learning'
 
-export type Source = 'this-site' | 'coders-for-causes' | 'airline' | 'capstone-project'
+export type Source =
+  'this-site' | 'coders-for-causes' | 'airline' | 'capstone-project'
 
 export type Skill = {
   name: string

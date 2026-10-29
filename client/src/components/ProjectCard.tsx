@@ -24,7 +24,13 @@ function ProjectCard({ project }: ProjectCardProps) {
 
       <div className="project-card-links">
         {links.map((link) => (
-          <a key={link.url} href={link.url} className="link-arrow" target="_blank" rel="noopener noreferrer">
+          <a
+            key={link.url}
+            href={link.url}
+            className="link-arrow"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {link.label} <span aria-hidden="true">↗</span>
           </a>
         ))}
