@@ -16,7 +16,7 @@ function CallToAction() {
           Contact me
         </Link>
         <a
-          href="/resume-october.pdf"
+          href="/resume.pdf"
           className="link-arrow"
           download="David-Wang-Resume.pdf"
         >

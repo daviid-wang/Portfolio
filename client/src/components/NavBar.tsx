@@ -15,7 +15,7 @@ function NavBar() {
         <NavLink to="/education">Education</NavLink>
         <NavLink to="/contact">Contact</NavLink>
         <a
-          href="/resume-october.pdf"
+          href="/resume.pdf"
           download="David-Wang-Resume.pdf"
           className="navbar-resume"
         >
