@@ -141,7 +141,14 @@ public class SkillGroupsController : ControllerBase
                         "Azure App Service",
                         [Source.ThisSite],
                         SkillLevel.Project,
-                        "Hosts this website, with the React front end and .NET server deployed together."                    )
+                        "Hosts this website, with the React front end and .NET server deployed together."
+                    ),
+                    new Skill(
+                        "OpenSpec · AI-assisted planning",
+                        [Source.Airline],
+                        SkillLevel.Learning,
+                        "Learning a workflow where AI documents existing code, so new features are planned against it before any code is written."
+                    )
                 ]
             )
         };
