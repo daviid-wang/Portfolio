@@ -13,9 +13,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseStaticFiles();
+app.MapStaticAssets();
 
 app.MapControllers();
+
+app.MapFallback("/api/{**path}", () => Results.NotFound());
 
 app.MapFallbackToFile("index.html");
 
