@@ -1,11 +1,20 @@
 .projects-summary {
   grid-template-columns: 4fr 3fr;
+
+  @media (max-width: 768px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .projects-text {
   justify-self: center;
   margin-right: 3rem;
   margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    justify-self: start;
+    margin: 0 0 1rem;
+  }
 }
 
 .projects-actions {

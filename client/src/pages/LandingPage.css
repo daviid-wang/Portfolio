@@ -1,5 +1,9 @@
 .landing-content {
   grid-template-columns: 3fr 2fr;
+
+  @media (max-width: 768px) {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 .landing-intro {
@@ -20,6 +24,10 @@
 .landing-photo-wrap {
   justify-self: center;
   margin-right: 3rem;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
 }
 
 .landing-photo {
