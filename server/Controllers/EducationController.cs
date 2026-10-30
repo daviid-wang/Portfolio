@@ -60,7 +60,20 @@ public class EducationController : ControllerBase
               "UWA Engineering Scholarship",
               "Awarded for academic merit."
         ),
-        [],
+        [
+            new EducationHighlight(
+                "MOBILE ROBOTS · 2024",
+                "Autonomous mapping robot",
+                "Integrated our software with an existing robot so it could navigate and map an area on its own. Using its camera, the robot recognised hand-drawn numbers placed around the area and recorded where each one was on the map.",
+                ["Autonomous navigation", "Mapping", "Computer vision", "Hardware integration"]
+            ),
+            new EducationHighlight(
+                "AI & ADAPTIVE SYSTEMS · 2024",
+                "Eye scan analysis with a neural network",
+                "Built a neural network that analyses eye scans and automatically highlights irregularities. Adjusted the network's weights and compared the results to see how each change affected its accuracy.",
+                ["Neural networks", "Image analysis", "Model evaluation"]
+            )
+        ],
         ["Software Requirements and Design", "Software Testing and Quality Assurance", "Mobile Robots", "Artificial Intelligence and Adaptive Systems"]
       )
     };
