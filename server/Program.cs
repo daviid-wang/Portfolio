@@ -1,7 +1,39 @@
+using Microsoft.EntityFrameworkCore;
+using Portfolio.Api.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
+
+var connectionString =
+    builder.Configuration.GetConnectionString("Portfolio")
+    ?? throw new InvalidOperationException("Connection string 'Portfolio' not found.");
+
+builder.Services.AddDbContext<PortfolioDbContext>(options =>
+    options
+        .UseNpgsql(connectionString)
+        .UseSeeding(
+            (context, _) =>
+            {
+                var db = (PortfolioDbContext)context;
+                if (db.Experience.Any())
+                    return;
+                SeedData.AddAll(db);
+                db.SaveChanges();
+            }
+        )
+        .UseAsyncSeeding(
+            async (context, _, cancellationToken) =>
+            {
+                var db = (PortfolioDbContext)context;
+                if (await db.Experience.AnyAsync(cancellationToken))
+                    return;
+                SeedData.AddAll(db);
+                await db.SaveChangesAsync(cancellationToken);
+            }
+        )
+);
 
 var app = builder.Build();
 
