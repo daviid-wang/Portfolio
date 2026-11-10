@@ -35,6 +35,19 @@ builder.Services.AddDbContext<PortfolioDbContext>(options =>
         )
 );
 
+builder.Services.AddOutputCache(options =>
+    options.AddPolicy(
+        "Content",
+        policy =>
+        {
+            if (builder.Environment.IsDevelopment())
+                policy.NoCache();
+            else
+                policy.Expire(TimeSpan.FromMinutes(10));
+        }
+    )
+);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -44,6 +57,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseOutputCache();
 
 app.MapStaticAssets();
 

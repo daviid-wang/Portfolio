@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
 using Microsoft.EntityFrameworkCore;
 using Portfolio.Api.Data;
 using Portfolio.Api.Models;
@@ -7,6 +8,7 @@ namespace Portfolio.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[OutputCache(PolicyName = "Content")]
 public class ExperienceController(PortfolioDbContext db) : ControllerBase
 {
     [HttpGet]
