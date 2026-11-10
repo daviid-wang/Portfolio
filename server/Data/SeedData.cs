@@ -38,8 +38,18 @@ public static class SeedData
             Title = "Portfolio Website",
             Eyebrow = "FEATURED · 2026",
             Description =
-                "Designed in Figma and built from scratch. A React and TypeScript single-page app with client-side routing, served by an ASP.NET Core 10 API and deployed on Azure App Service. Built to learn React and TypeScript.",
-            Tech = ["ASP.NET Core", "React", "TypeScript", "Azure App Service", "Figma"],
+                "Designed in Figma and built from scratch. A React and TypeScript single-page app served by an ASP.NET Core 10 API, with its content stored in PostgreSQL (Neon) through Entity Framework Core. Deployed to Azure App Service by GitHub Actions, which applies database migrations before each release.",
+            Tech =
+            [
+                "ASP.NET Core",
+                "React",
+                "TypeScript",
+                "EF Core",
+                "PostgreSQL",
+                "Azure App Service",
+                "GitHub Actions",
+                "Figma",
+            ],
             Links = [new ProjectLink { Label = "GitHub", Url = "https://github.com/daviid-wang/Portfolio" }],
         },
         new Project
@@ -285,6 +295,14 @@ public static class SeedData
                     Source = [Source.Airline],
                     Level = SkillLevel.Production,
                     Description = "Updated the airline's live database with no downtime for staff.",
+                },
+                new Skill
+                {
+                    Name = "Entity Framework Core · PostgreSQL",
+                    Source = [Source.ThisSite],
+                    Level = SkillLevel.Project,
+                    Description =
+                        "Moved this site's content into a PostgreSQL database, with migrations applied automatically on every deploy.",
                 },
             ],
         },
