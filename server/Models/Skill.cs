@@ -30,9 +30,12 @@ public enum Source
     CapstoneProject
 }
 
-public record Skill(
-  string Name,
-  Source[] Source,
-  SkillLevel Level,
-  string Description
-);
+public class Skill
+{
+    [JsonIgnore]
+    public int Id { get; set; }
+    public required string Name { get; set; }
+    public List<Source> Source { get; set; } = [];
+    public SkillLevel Level { get; set; }
+    public required string Description { get; set; }
+}

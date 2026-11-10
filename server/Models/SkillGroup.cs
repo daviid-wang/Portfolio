@@ -1,7 +1,12 @@
+using System.Text.Json.Serialization;
+
 namespace Portfolio.Api.Models;
 
-public record SkillGroup(
-  string Title,
-  string Summary,
-  Skill[] Skills
-);
+public class SkillGroup
+{
+    [JsonIgnore]
+    public int Id { get; set; }
+    public required string Title { get; set; }
+    public required string Summary { get; set; }
+    public List<Skill> Skills { get; set; } = [];
+}
